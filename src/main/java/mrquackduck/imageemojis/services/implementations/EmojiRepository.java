@@ -61,8 +61,8 @@ public class EmojiRepository implements IEmojiRepository {
                 BufferedImage image = ImageIO.read(file);
                 if (image == null) continue;
 
-                String name = file.getName().substring(0, file.getName().lastIndexOf('.')).toLowerCase();
-                String fileName = file.getName().toLowerCase();
+                String name = file.getName().substring(0, file.getName().lastIndexOf('.'));
+                String fileName = file.getName();
 
                 // Generating a hash based on the file name
                 String fileNameHash = CharUtil.generateSHA256(fileName);
